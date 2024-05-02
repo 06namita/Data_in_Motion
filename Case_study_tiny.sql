@@ -171,7 +171,7 @@ ON P.product_id=oi.product_id
 group by oi.order_id)
 
 select order_id, total_order,(case 	
-									when total_order>300 then 'Expensive'
+				    when total_order>300 then 'Expensive'
                                     when total_order>100 then 'Affordable'
                                     else 'cheap'
                                     end)
